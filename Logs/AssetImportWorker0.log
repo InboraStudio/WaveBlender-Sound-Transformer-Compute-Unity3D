@@ -1,0 +1,316 @@
+Using pre-set license
+Built from '6000.0/staging' branch; Version is '6000.0.26f1 (ccb7c73d2c02) revision 13416391'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 15789 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+B:\Unity\Unity engine\6000.0.26f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+B:/Unity/Games/Sound Transformer Data Compute
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64891
+-job-worker-count
+5
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+Successfully changed project path to: B:/Unity/Games/Sound Transformer Data Compute
+B:/Unity/Games/Sound Transformer Data Compute
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [23800]  Target information:
+
+Player connection [23800]  * "[IP] 192.168.29.236 [Port] 0 [Flags] 2 [Guid] 3897757976 [EditorId] 3897757976 [Version] 1048832 [Id] WindowsEditor(7,?????) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [23800] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [23800] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 181.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.26f1 (ccb7c73d2c02)
+[Subsystems] Discovering subsystems at path B:/Unity/Unity engine/6000.0.26f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path B:/Unity/Games/Sound Transformer Data Compute/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f9d)
+    Vendor:   NVIDIA
+    VRAM:     3935 MB
+    Driver:   32.0.15.6607
+Initialize mono
+Mono path[0] = 'B:/Unity/Unity engine/6000.0.26f1/Editor/Data/Managed'
+Mono path[1] = 'B:/Unity/Unity engine/6000.0.26f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'B:/Unity/Unity engine/6000.0.26f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56660
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: B:/Unity/Unity engine/6000.0.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: B:/Unity/Unity engine/6000.0.26f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Register platform support module: B:/Unity/Unity engine/6000.0.26f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: B:/Unity/Unity engine/6000.0.26f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: B:/Unity/Unity engine/6000.0.26f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 1.339897 seconds.
+- Loaded All Assemblies, in  8.798 seconds
+Native extension for LinuxStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 2354 ms
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.298 seconds
+Domain Reload Profiling: 12096ms
+	BeginReloadAssembly (6200ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (56ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (1410ms)
+	LoadAllAssembliesAndSetupDomain (1115ms)
+		LoadAssemblies (6202ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1105ms)
+			TypeCache.Refresh (1103ms)
+				TypeCache.ScanAssembly (1083ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (3299ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (3215ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2852ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (9ms)
+			ProcessInitializeOnLoadAttributes (221ms)
+			ProcessInitializeOnLoadMethodAttributes (121ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Compilation Pipeline: Could not read file Packages/com.unity.collab-proxy/Editor/PlasticSCM/Toolbar/Unity.CollabProxy.Editor.asmdef
+Fatal Error! Compilation Pipeline: Could not read file Packages/com.unity.collab-proxy/Editor/PlasticSCM/Toolbar/Unity.CollabProxy.Editor.asmdef
+Crash!!!
+SymInit: Symbol-SearchPath: 'B:/Unity/Unity engine/6000.0.26f1/Editor/Data/Mono;.;B:\Unity\Games\Sound Transformer Data Compute;B:\Unity\Games\Sound Transformer Data Compute\Library\BurstCache\JIT;B:\Unity\Unity engine\6000.0.26f1\Editor;C:\WINDOWS;C:\WINDOWS\system32;', symOptions: 534, UserName: 'aloka'
+OS-Version: 10.0.0
+B:\Unity\Unity engine\6000.0.26f1\Editor\Unity.exe:Unity.exe (00007FF6F6BF0000), size: 299008 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6000.0.26.47047
+C:\WINDOWS\SYSTEM32\ntdll.dll:ntdll.dll (00007FFB41A10000), size: 2191360 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5624
+C:\WINDOWS\System32\KERNEL32.DLL:KERNEL32.DLL (00007FFB40110000), size: 802816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\System32\KERNELBASE.dll:KERNELBASE.dll (00007FFB3EB30000), size: 4005888 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\System32\USER32.dll:USER32.dll (00007FFB40F40000), size: 1773568 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\System32\win32u.dll:win32u.dll (00007FFB3EB00000), size: 155648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5766
+C:\WINDOWS\System32\GDI32.dll:GDI32.dll (00007FFB3FBF0000), size: 167936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\System32\gdi32full.dll:gdi32full.dll (00007FFB3F050000), size: 1191936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\System32\msvcp_win.dll:msvcp_win.dll (00007FFB3F600000), size: 630784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3374
+C:\WINDOWS\System32\ucrtbase.dll:ucrtbase.dll (00007FFB3F4E0000), size: 1118208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3593
+C:\WINDOWS\System32\IMM32.DLL:IMM32.DLL (00007FFB40EE0000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+B:\Unity\Unity engine\6000.0.26f1\Editor\Unity.dll:Unity.dll (00007FFA7CBD0000), size: 87052288 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6000.0.26.47047
+C:\WINDOWS\System32\CRYPT32.dll:CRYPT32.dll (00007FFB3F370000), size: 1474560 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\System32\ADVAPI32.dll:ADVAPI32.dll (00007FFB3F9D0000), size: 724992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5624
+C:\WINDOWS\System32\msvcrt.dll:msvcrt.dll (00007FFB40060000), size: 684032 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.22621.2506
+C:\WINDOWS\System32\sechost.dll:sechost.dll (00007FFB3FF60000), size: 688128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+B:\Unity\Unity engine\6000.0.26f1\Editor\libfbxsdk.dll:libfbxsdk.dll (00007FFA84590000), size: 8019968 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.3.7.0
+C:\WINDOWS\System32\bcrypt.dll:bcrypt.dll (00007FFB3F2C0000), size: 163840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.4746
+B:\Unity\Unity engine\6000.0.26f1\Editor\s3tcompress.dll:s3tcompress.dll (00007FFB26D50000), size: 180224 (result: 0), SymType: '-deferred-', PDB: ''
+B:\Unity\Unity engine\6000.0.26f1\Editor\etccompress.dll:etccompress.dll (00007FFA840B0000), size: 5070848 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\System32\RPCRT4.dll:RPCRT4.dll (00007FFB418B0000), size: 1142784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+B:\Unity\Unity engine\6000.0.26f1\Editor\ispc_texcomp.dll:ispc_texcomp.dll (00007FFAC1160000), size: 1826816 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\System32\ole32.dll:ole32.dll (00007FFB3F830000), size: 1703936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+B:\Unity\Unity engine\6000.0.26f1\Editor\compress_bc7e.dll:compress_bc7e.dll (00007FFAD4E60000), size: 1433600 (result: 0), SymType: '-deferred-', PDB: ''
+B:\Unity\Unity engine\6000.0.26f1\Editor\FreeImage.dll:FreeImage.dll (0000000180000000), size: 5783552 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.18.0.0
+B:\Unity\Unity engine\6000.0.26f1\Editor\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FFB36E10000), size: 53248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.2201.24001
+C:\WINDOWS\System32\combase.dll:combase.dll (00007FFB40B40000), size: 3743744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\System32\WS2_32.dll:WS2_32.dll (00007FFB3F6A0000), size: 462848 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.4746
+B:\Unity\Unity engine\6000.0.26f1\Editor\umbraoptimizer64.dll:umbraoptimizer64.dll (00007FFA87DB0000), size: 1187840 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\System32\SETUPAPI.dll:SETUPAPI.dll (00007FFB41270000), size: 4669440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\WINDOWS\System32\SHELL32.dll:SHELL32.dll (00007FFB40290000), size: 9048064 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FFB24310000), size: 122880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.44.35211.0
+C:\WINDOWS\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FFB23E10000), size: 561152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.44.35211.0
+C:\WINDOWS\System32\wintypes.dll:wintypes.dll (00007FFB3EF10000), size: 1306624 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5262
+C:\WINDOWS\System32\SHLWAPI.dll:SHLWAPI.dll (00007FFB3FD00000), size: 430080 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FFB24300000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.44.35211.0
+C:\WINDOWS\System32\OLEAUT32.dll:OLEAUT32.dll (00007FFB41100000), size: 884736 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\System32\WINTRUST.dll:WINTRUST.dll (00007FFB3F180000), size: 507904 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\SYSTEM32\d3d12.dll:d3d12.dll (00007FFB25FD0000), size: 155648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\SYSTEM32\d3d11.dll:d3d11.dll (00007FFB3C150000), size: 2453504 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\SYSTEM32\dxgi.dll:dxgi.dll (00007FFB3C3B0000), size: 1011712 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\SYSTEM32\HID.DLL:HID.DLL (00007FFB3D300000), size: 57344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FFB3D5D0000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FFB3BF10000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FFA8F810000), size: 1048576 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FFB39D50000), size: 1228800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.4830
+C:\WINDOWS\SYSTEM32\WINMM.dll:WINMM.dll (00007FFB387E0000), size: 212992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\SYSTEM32\GLU32.dll:GLU32.dll (00007FFAEFDD0000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+B:\Unity\Unity engine\6000.0.26f1\Editor\SketchUpAPI.dll:SketchUpAPI.dll (00007FFA7C330000), size: 8990720 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 23.0.0.0
+B:\Unity\Unity engine\6000.0.26f1\Editor\NativeProxyHelper.dll:NativeProxyHelper.dll (00007FFA838F0000), size: 1789952 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\SYSTEM32\VERSION.dll:VERSION.dll (00007FFB37A40000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\SYSTEM32\WSOCK32.dll:WSOCK32.dll (00007FFB23DE0000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+B:\Unity\Unity engine\6000.0.26f1\Editor\SketchUpCommonPreferences.dll:SketchUpCommonPreferences.dll (00007FFA92FC0000), size: 499712 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 23.0.0.0
+C:\WINDOWS\SYSTEM32\Secur32.dll:Secur32.dll (00007FFB3D920000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\SYSTEM32\dxcore.dll:dxcore.dll (00007FFB3BC90000), size: 225280 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FFB3DDB0000), size: 274432 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5413
+B:\Unity\Unity engine\6000.0.26f1\Editor\OpenRL.dll:OpenRL.dll (00000221C7830000), size: 12779520 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.5.0.2907
+C:\WINDOWS\SYSTEM32\MSVCP100.dll:MSVCP100.dll (0000000062810000), size: 622592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.40219.325
+C:\WINDOWS\SYSTEM32\MSVCR100.dll:MSVCR100.dll (0000000062730000), size: 860160 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.40219.325
+B:\Unity\Unity engine\6000.0.26f1\Editor\embree.dll:embree.dll (00007FFA7B340000), size: 16711680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.14.0.0
+C:\WINDOWS\SYSTEM32\cfgmgr32.DLL:cfgmgr32.DLL (00007FFB3E7D0000), size: 319488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+B:\Unity\Unity engine\6000.0.26f1\Editor\tbb.dll:tbb.dll (00007FFA98490000), size: 303104 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.3.2022.1111
+C:\WINDOWS\SYSTEM32\MSWSOCK.DLL:MSWSOCK.DLL (00007FFB3E020000), size: 430080 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5413
+B:\Unity\Unity engine\6000.0.26f1\Editor\OpenRL_pthread.dll:OpenRL_pthread.dll (00000221C8480000), size: 61440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.9.0.0
+C:\WINDOWS\SYSTEM32\MSASN1.dll:MSASN1.dll (00007FFB3E850000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\WINDOWS\System32\bcryptprimitives.dll:bcryptprimitives.dll (00007FFB3F2F0000), size: 503808 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.4317
+C:\WINDOWS\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FFB3DB50000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3958
+C:\WINDOWS\system32\uxtheme.dll:uxtheme.dll (00007FFB3B110000), size: 737280 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FFB3C9E0000), size: 9543680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5766
+C:\WINDOWS\System32\SHCORE.dll:SHCORE.dll (00007FFB3F720000), size: 1093632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\SYSTEM32\profapi.dll:profapi.dll (00007FFB3EA30000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\system32\IconCodecService.dll:IconCodecService.dll (00007FFB0AD70000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\SYSTEM32\WindowsCodecs.dll:WindowsCodecs.dll (00007FFB3A760000), size: 1773568 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5624
+C:\WINDOWS\System32\clbcatq.dll:clbcatq.dll (00007FFB416F0000), size: 720896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2001.12.10941.16384
+C:\WINDOWS\System32\netprofm.dll:netprofm.dll (00007FFB39CC0000), size: 491520 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3527
+C:\WINDOWS\System32\npmproxy.dll:npmproxy.dll (00007FFB36A50000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3527
+C:\WINDOWS\System32\NSI.dll:NSI.dll (00007FFB40280000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.4746
+C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FFB387C0000), size: 102400 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FFB38780000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\WINDOWS\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FFB3D600000), size: 1015808 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5262
+C:\WINDOWS\system32\napinsp.dll:napinsp.dll (00007FFB1A7D0000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\system32\pnrpnsp.dll:pnrpnsp.dll (00007FFB19530000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\System32\winrnr.dll:winrnr.dll (00007FFB19400000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\system32\wshbth.dll:wshbth.dll (00007FFB387A0000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\system32\nlansp_c.dll:nlansp_c.dll (00007FFB17AA0000), size: 135168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5331
+C:\WINDOWS\System32\fwpuclnt.dll:fwpuclnt.dll (00007FFB37C20000), size: 540672 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\Windows\System32\rasadhlp.dll:rasadhlp.dll (00007FFB38F60000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+B:\Unity\Unity engine\6000.0.26f1\Editor\AMDUnityPlugin.DLL:AMDUnityPlugin.DLL (00007FFA792A0000), size: 8814592 (result: 0), SymType: '-deferred-', PDB: ''
+B:\Unity\Unity engine\6000.0.26f1\Editor\NVUnityPlugin.DLL:NVUnityPlugin.DLL (00007FFA83760000), size: 1609728 (result: 0), SymType: '-deferred-', PDB: ''
+B:\Unity\Unity engine\6000.0.26f1\Editor\Data\Tools\astcenc-avx2.dll:astcenc-avx2.dll (00007FFA91290000), size: 364544 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\System32\MMDevApi.dll:MMDevApi.dll (00007FFB2A400000), size: 638976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5547
+C:\WINDOWS\System32\DEVOBJ.dll:DEVOBJ.dll (00007FFB3E7A0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll:directxdatabasehelper.dll (00007FFB357C0000), size: 303104 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\System32\DriverStore\FileRepository\nvam.inf_amd64_4ae7e10b45473e65\nvldumdx.dll:nvldumdx.dll (00007FFA91670000), size: 802816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.6607
+C:\WINDOWS\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FFB37940000), size: 204800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\SYSTEM32\cryptbase.dll:cryptbase.dll (00007FFB3E290000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.4746
+C:\WINDOWS\SYSTEM32\wldp.dll:wldp.dll (00007FFB3E320000), size: 327680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\SYSTEM32\drvstore.dll:drvstore.dll (00007FFB37680000), size: 1417216 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5413
+C:\WINDOWS\System32\imagehlp.dll:imagehlp.dll (00007FFB401F0000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FFB3E270000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\system32\rsaenh.dll:rsaenh.dll (00007FFB3DAB0000), size: 225280 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5624
+C:\WINDOWS\System32\DriverStore\FileRepository\nvam.inf_amd64_4ae7e10b45473e65\nvgpucomp64.dll:nvgpucomp64.dll (00007FFA72A80000), size: 47251456 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.6607
+C:\WINDOWS\System32\DriverStore\FileRepository\nvam.inf_amd64_4ae7e10b45473e65\Display.NvContainer\NvMessageBus.dll:NvMessageBus.dll (00007FFB2DBA0000), size: 3506176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.12.3354.5005
+C:\WINDOWS\System32\DriverStore\FileRepository\nvam.inf_amd64_4ae7e10b45473e65\nvwgf2umx.dll:nvwgf2umx.dll (00007FFA6E600000), size: 71811072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.6607
+C:\WINDOWS\SYSTEM32\powrprof.dll:powrprof.dll (00007FFB3E470000), size: 315392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3958
+C:\WINDOWS\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FFB3E420000), size: 77824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5124
+C:\WINDOWS\system32\nvspcap64.dll:nvspcap64.dll (00007FFA90FC0000), size: 2949120 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.28.0.417
+C:\WINDOWS\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FFB3DC60000), size: 212992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\WINDOWS\System32\DriverStore\FileRepository\nvam.inf_amd64_4ae7e10b45473e65\nvppex.dll:nvppex.dll (00007FFA93EF0000), size: 1396736 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.6607
+C:\WINDOWS\system32\wbem\wbemprox.dll:wbemprox.dll (00007FFB353E0000), size: 65536 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\WINDOWS\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FFB30BF0000), size: 524288 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\WINDOWS\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FFB2F9A0000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\WINDOWS\system32\wbem\fastprox.dll:fastprox.dll (00007FFB2F9C0000), size: 1015808 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\WINDOWS\SYSTEM32\amsi.dll:amsi.dll (00007FFB2A3B0000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3527
+C:\WINDOWS\SYSTEM32\USERENV.dll:USERENV.dll (00007FFB3E110000), size: 163840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3527
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.25070.5-0\MpOav.dll:MpOav.dll (00007FFB2A170000), size: 655360 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 4.18.25070.5
+C:\WINDOWS\SYSTEM32\opencl.dll:opencl.dll (00007FFA915F0000), size: 483328 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.0.6.0
+B:\Unity\Unity engine\6000.0.26f1\Editor\radeonrays.dll:radeonrays.dll (00007FFA91590000), size: 344064 (result: 0), SymType: '-deferred-', PDB: ''
+B:\Unity\Unity engine\6000.0.26f1\Editor\Data\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FFA79C00000), size: 10756096 (result: 0), SymType: '-deferred-', PDB: ''
+B:\Unity\Unity engine\6000.0.26f1\Editor\Data\PlaybackEngines\iOSSupport\x64\UnityEditor.iOS.Native.dll:UnityEditor.iOS.Native.dll (00007FFA91540000), size: 311296 (result: 0), SymType: '-deferred-', PDB: ''
+C:\WINDOWS\SYSTEM32\PROPSYS.dll:PROPSYS.dll (00007FFB3AB50000), size: 1081344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.22621.5697
+C:\Windows\System32\Windows.FileExplorer.Common.dll:Windows.FileExplorer.Common.dll (00007FFB1D100000), size: 770048 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\SYSTEM32\apphelp.dll:apphelp.dll (00007FFB379A0000), size: 618496 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\WINDOWS\system32\NetworkExplorer.dll:NetworkExplorer.dll (00007FFB1D090000), size: 106496 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3527
+C:\Windows\System32\Windows.StateRepositoryPS.dll:Windows.StateRepositoryPS.dll (00007FFB2AAC0000), size: 962560 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5624
+C:\WINDOWS\SYSTEM32\windows.staterepositoryclient.dll:windows.staterepositoryclient.dll (00007FFB35170000), size: 249856 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5624
+C:\WINDOWS\SYSTEM32\edputil.dll:edputil.dll (00007FFB19810000), size: 163840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.4830
+C:\WINDOWS\SYSTEM32\urlmon.dll:urlmon.dll (00007FFB27EE0000), size: 2052096 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.22621.5697
+C:\WINDOWS\SYSTEM32\iertutil.dll:iertutil.dll (00007FFB27C20000), size: 2875392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.22621.5697
+C:\WINDOWS\SYSTEM32\srvcli.dll:srvcli.dll (00007FFB31170000), size: 163840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.4249
+C:\WINDOWS\SYSTEM32\netutils.dll:netutils.dll (00007FFB3D5C0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\Windows\System32\cldapi.dll:cldapi.dll (00007FFB197E0000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\WINDOWS\SYSTEM32\virtdisk.dll:virtdisk.dll (00007FFB20910000), size: 90112 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5415
+C:\Windows\System32\appresolver.dll:appresolver.dll (00007FFB195F0000), size: 749568 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5697
+C:\Windows\System32\Bcp47Langs.dll:Bcp47Langs.dll (00007FFB310C0000), size: 393216 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5262
+C:\Windows\System32\OneCoreUAPCommonProxyStub.dll:OneCoreUAPCommonProxyStub.dll (00007FFB30420000), size: 6488064 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5413
+C:\WINDOWS\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FFB3BCD0000), size: 2306048 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.5471
+
+========== OUTPUTTING STACK TRACE ==================
+
+0x00007FFB3EB900AC (KERNELBASE) RaiseException
+0x00007FFA7E76A4D5 (Unity) EditorMonoConsole::LogToConsoleImplementation
+0x00007FFA7E76B19A (Unity) EditorMonoConsole::LogToConsoleImplementation
+0x00007FFA7F41A31D (Unity) DebugStringToFilePostprocessedStacktrace
+0x00007FFA7F4196B8 (Unity) DebugStringToFile
+0x00007FFA7ED1FBDC (Unity) RegisterAssemblyDefinition
+0x00007FFA7F14CEE6 (Unity) ProcessAssemblyAssets
+0x00007FFA7F14DBF6 (Unity) UpdateScriptCompilationPipelineCaches
+0x00007FFA7F028E54 (Unity) InitializeScriptPipelineCaches
+0x00007FFA7E8758A3 (Unity) Application::InitializeProject
+0x00007FFA7EE7AE73 (Unity) UnityMain
+0x00007FF6F6BF2FBA (Unity) __scrt_common_main_seh
+0x00007FFB4012259D (KERNEL32) BaseThreadInitThunk
+0x00007FFB41A6AF78 (ntdll) RtlUserThreadStart
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Users/aloka/AppData/Local/Temp/Unity/Editor/Crashes

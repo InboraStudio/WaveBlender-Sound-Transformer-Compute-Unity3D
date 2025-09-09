@@ -1,0 +1,276 @@
+#pragma kernel UpdatePressure
+#pragma kernel UpdateVelocity
+#pragma kernel UpdateBeta
+#pragma kernel SampleAudio
+
+// Grid parameters
+uint3 gridSize;
+float deltaT;
+float deltaX;
+float speedOfSound;
+float airDensity;
+float currentTime;
+
+// Wave fields
+RWTexture3D<float> pressureField;
+RWTexture3D<float4> velocityField;
+RWTexture3D<float> betaField;
+
+// Enhanced source modeling
+RWStructuredBuffer<float4> pointSources; // xyz position, w amplitude
+RWStructuredBuffer<float4> sourceProperties; // x=frequency, y=damping, z=material, w=phase
+uint numSources;
+
+// Audio sampling with filtering
+RWStructuredBuffer<float> audioSamples;
+float3 listenerPosition;
+uint numAudioSamples;
+
+// Material properties for different sound types
+float GetMaterialDensity(float material)
+{
+    if (material < 0.5) return 1.225; // Air
+    else if (material < 1.5) return 7800.0; // Steel (metallic sounds)
+    else if (material < 2.5) return 2700.0; // Aluminum (lighter metallic)
+    else if (material < 3.5) return 900.0;  // Wood
+    else return 1000.0; // Water/liquid
+}
+
+float GetMaterialSpeed(float material)
+{
+    if (material < 0.5) return 343.0; // Air
+    else if (material < 1.5) return 5100.0; // Steel
+    else if (material < 2.5) return 6260.0; // Aluminum  
+    else if (material < 3.5) return 4000.0; // Wood
+    else return 1500.0; // Water
+}
+
+[numthreads(8,8,8)]
+void UpdatePressure(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id >= gridSize)) return;
+    
+    float p = pressureField[id];
+    float4 v = velocityField[id];
+    
+    // Enhanced divergence calculation
+    float3 vNext = velocityField[min(id + uint3(1,0,0), gridSize-1)].xyz;
+    float3 vPrev = velocityField[max(int3(id) - int3(1,0,0), 0)].xyz;
+    float divV = (vNext.x - vPrev.x) / (2.0 * deltaX);
+    
+    vNext = velocityField[min(id + uint3(0,1,0), gridSize-1)].xyz;
+    vPrev = velocityField[max(int3(id) - int3(0,1,0), 0)].xyz;
+    divV += (vNext.y - vPrev.y) / (2.0 * deltaX);
+    
+    vNext = velocityField[min(id + uint3(0,0,1), gridSize-1)].xyz;
+    vPrev = velocityField[max(int3(id) - int3(0,0,1), 0)].xyz;
+    divV += (vNext.z - vPrev.z) / (2.0 * deltaX);
+    
+    // Beta blending with material properties
+    float beta = betaField[id];
+    float material = floor(beta * 4.0); // 0-4 material types
+    float rho = lerp(airDensity, GetMaterialDensity(material), saturate(beta));
+    float c = lerp(speedOfSound, GetMaterialSpeed(material), saturate(beta));
+    
+    // FDTD pressure update
+    float newPressure = p - rho * c * c * deltaT * divV;
+    
+    // Enhanced source injection with realistic impulse responses
+    for (uint i = 0; i < numSources; i++)
+    {
+        float4 source = pointSources[i];
+        float4 properties = sourceProperties[i];
+        
+        float3 sourcePos = source.xyz;
+        float amplitude = source.w;
+        float frequency = properties.x;
+        float damping = properties.y;
+        float sourceMaterial = properties.z;
+        float phase = properties.w;
+        
+        float3 worldPos = float3(id) * deltaX;
+        float dist = distance(worldPos, sourcePos);
+        
+        if (dist < 0.1) // 10cm injection radius
+        {
+            float gaussian = exp(-dist*dist / (2.0 * 0.03 * 0.03)); // 3cm std deviation
+            
+            // Create realistic sound based on material type
+            float signal = 0.0;
+            float t = currentTime + phase;
+            
+            // Steel/metallic sounds (material 1)
+            if (sourceMaterial < 1.5) 
+            {
+                // Ringing metallic sound with harmonics
+                float envelope = exp(-damping * t) * (1.0 - exp(-t * 20.0)); // Attack + decay
+                signal += sin(t * frequency * 6.28318) * envelope;
+                signal += 0.3 * sin(t * frequency * 2.0 * 6.28318) * envelope;
+                signal += 0.1 * sin(t * frequency * 3.0 * 6.28318) * envelope;
+            }
+            // Wood sounds (material 3)
+            else if (sourceMaterial < 3.5)
+            {
+                // Percussive wood sound with quick decay
+                float envelope = exp(-damping * t * 3.0) * (1.0 - exp(-t * 50.0));
+                signal += sin(t * frequency * 6.28318) * envelope;
+                signal += 0.5 * sin(t * frequency * 1.5 * 6.28318) * envelope;
+                // Add some noise for wood texture
+                signal += 0.1 * (frac(sin(t * 12.9898) * 43758.5453) - 0.5) * envelope;
+            }
+            // Water/liquid sounds (material 4)
+            else if (sourceMaterial < 4.5)
+            {
+                // Bubble-like liquid sounds
+                float envelope = exp(-damping * t * 0.5);
+                signal += sin(t * frequency * 6.28318) * envelope;
+                signal += 0.2 * sin(t * frequency * 0.7 * 6.28318) * envelope;
+                // Add modulation for bubble effect
+                signal *= (1.0 + 0.3 * sin(t * frequency * 0.3 * 6.28318));
+            }
+            // Default air/impact sounds
+            else
+            {
+                // Short impact sound
+                float envelope = exp(-damping * t * 5.0) * (1.0 - exp(-t * 100.0));
+                signal += sin(t * frequency * 6.28318) * envelope;
+            }
+            
+            newPressure += amplitude * gaussian * signal * deltaT * 0.01; // Scale down
+        }
+    }
+    
+    // Enhanced boundary conditions with frequency-dependent absorption
+    if (any(id <= 2) || any(id >= gridSize - 3))
+    {
+        // High-frequency absorption (more realistic)
+        newPressure *= 0.85; 
+    }
+    
+    pressureField[id] = newPressure;
+}
+
+[numthreads(8,8,8)]
+void UpdateVelocity(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id >= gridSize)) return;
+    
+    float4 v = velocityField[id];
+    
+    // Calculate pressure gradient
+    float3 gradP = float3(0, 0, 0);
+    
+    float pNext = pressureField[min(id + uint3(1,0,0), gridSize-1)];
+    float pPrev = pressureField[max(int3(id) - int3(1,0,0), 0)];
+    gradP.x = (pNext - pPrev) / (2.0 * deltaX);
+    
+    pNext = pressureField[min(id + uint3(0,1,0), gridSize-1)];
+    pPrev = pressureField[max(int3(id) - int3(0,1,0), 0)];
+    gradP.y = (pNext - pPrev) / (2.0 * deltaX);
+    
+    pNext = pressureField[min(id + uint3(0,0,1), gridSize-1)];
+    pPrev = pressureField[max(int3(id) - int3(0,0,1), 0)];
+    gradP.z = (pNext - pPrev) / (2.0 * deltaX);
+    
+    // Material-based density
+    float beta = betaField[id];
+    float material = floor(beta * 4.0);
+    float rho = lerp(airDensity, GetMaterialDensity(material), saturate(beta));
+    
+    // FDTD velocity update with damping
+    float3 newVelocity = v.xyz - (deltaT / rho) * gradP;
+    
+    // Material-based damping
+    float dampingFactor = lerp(0.999, 0.95, saturate(beta)); // More damping in solids
+    newVelocity *= dampingFactor;
+    
+    // Boundary damping
+    if (any(id <= 2) || any(id >= gridSize - 3))
+    {
+        newVelocity *= 0.8;
+    }
+    
+    velocityField[id] = float4(newVelocity, 0);
+}
+
+[numthreads(8,8,8)]
+void UpdateBeta(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id >= gridSize)) return;
+    
+    float beta = 0.0; // Default air
+    
+    // Multiple moving objects with different materials
+    float3 worldPos = float3(id) * deltaX;
+    
+    // Moving metallic sphere
+    float3 sphere1Center = float3(0.4, 0.5, 0.5) + 0.12 * float3(sin(currentTime * 0.8), 0, cos(currentTime * 0.8));
+    float sphere1Radius = 0.06;
+    float distToSphere1 = distance(worldPos, sphere1Center);
+    if (distToSphere1 < sphere1Radius)
+    {
+        beta = 1.0 + 0.0; // Material 1 (steel/metallic)
+    }
+    
+    // Moving wooden block
+    float3 block1Center = float3(0.6, 0.5, 0.5) + 0.08 * float3(0, sin(currentTime * 1.2), 0);
+    float3 blockSize = float3(0.05, 0.08, 0.05);
+    float3 blockDist = abs(worldPos - block1Center) - blockSize;
+    float distToBlock = length(max(blockDist, 0.0)) + min(max(blockDist.x, max(blockDist.y, blockDist.z)), 0.0);
+    if (distToBlock < 0.01)
+    {
+        beta = 3.0 / 4.0; // Material 3 (wood)
+    }
+    
+    // Static boundaries for reflections
+    if (worldPos.y < 0.1 || worldPos.y > 0.9) // Floor and ceiling
+    {
+        beta = 3.0 / 4.0; // Wood surfaces
+    }
+    
+    betaField[id] = beta;
+}
+
+[numthreads(64,1,1)]
+void SampleAudio(uint3 id : SV_DispatchThreadID)
+{
+    uint sampleIndex = id.x;
+    if (sampleIndex >= numAudioSamples) return;
+    
+    // Multi-point sampling for better audio quality
+    uint3 listenerGrid = uint3(round(listenerPosition));
+    listenerGrid = clamp(listenerGrid, uint3(1,1,1), gridSize - 2);
+    
+    // Sample from multiple nearby points and average (spatial anti-aliasing)
+    float pressure = 0.0;
+    float totalWeight = 0.0;
+    
+    for (int dx = -1; dx <= 1; dx++)
+    {
+        for (int dy = -1; dy <= 1; dy++)
+        {
+            for (int dz = -1; dz <= 1; dz++)
+            {
+                uint3 samplePos = listenerGrid + int3(dx, dy, dz);
+                samplePos = clamp(samplePos, uint3(0,0,0), gridSize - 1);
+                
+                float weight = 1.0 / (1.0 + abs(dx) + abs(dy) + abs(dz));
+                pressure += pressureField[samplePos] * weight;
+                totalWeight += weight;
+            }
+        }
+    }
+    
+    pressure /= totalWeight;
+    
+    // Enhanced audio processing with filtering
+    float audioSample = pressure * 500.0; // Scale factor
+    
+    // Soft clipping instead of hard clipping for better sound
+    audioSample = audioSample / (1.0 + abs(audioSample) * 0.5);
+    
+    // Final limiting
+    audioSample = clamp(audioSample, -1.0, 1.0);
+    
+    audioSamples[sampleIndex] = audioSample;
+}
