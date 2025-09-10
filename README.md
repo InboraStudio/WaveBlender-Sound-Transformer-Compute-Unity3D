@@ -29,7 +29,7 @@ A high-performance, GPU-accelerated sound simulation and synthesis system for Un
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/SoundTransformerDataCompute.git
+   git clone https://github.com/InboraStudio/WaveBlender-Sound-Transformer-Compute-Unity3D.git
    ```
 2. **Open in Unity (2022.3+ recommended).**
 3. **Assign the `WaveBlenderSolver` and `WaveBlenderDemo` scripts to GameObjects.**
